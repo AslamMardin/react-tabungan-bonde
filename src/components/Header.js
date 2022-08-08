@@ -6,8 +6,8 @@ const Header = () => {
 		<div className="container">
 		<div className="row">
 		<div className="col-12">
-		<h1 className="display-1">Movie Bonde</h1>
-		<h3 className="lead mb-0 d-none d-md-block">Nontonki Biar Seruu!</h3>
+		<h1 className="display-1">Bioskop Bonde</h1>
+		<h3 className="lead mb-3">Nonton ki jangan malu malu kata aslam!</h3>
 		</div>
 		</div>
 		</div>
