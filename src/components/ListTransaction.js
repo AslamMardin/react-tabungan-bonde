@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ListTransaction = ({id, nominal, keterangan, tanggal, onHapusTransaction}) => {
+const ListTransaction = ({id, nominal, keterangan, tanggal, onHapus}) => {
 
 	const getTanggal = (tanggal) => {
 
@@ -22,7 +22,7 @@ const ListTransaction = ({id, nominal, keterangan, tanggal, onHapusTransaction})
 		<p className="fs-5 mb-1 me-3 text">
 		Rp. {nominal.toLocaleString('id-ID')}
 		</p>
-		<span className="delete-icon" onClick={onHapusTransaction}>x</span>
+		<span className="delete-icon" id={id} onClick={onHapus}>x</span>
 		</div>
 		)
 }

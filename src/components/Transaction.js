@@ -1,7 +1,7 @@
 import React from 'react'
 import ListTransaction from '../components/ListTransaction'
 
-const Transaction = ({transactions}) => {
+const Transaction = ({transactions, onHapusTransaction}) => {
 	return (
 		<section id="transaction">
 		<div className="container py-5">
@@ -18,7 +18,7 @@ const Transaction = ({transactions}) => {
 				tanggal={transaction.tanggal}
 				keterangan={transaction.keterangan}
 				nominal={transaction.nominal}
-				
+				onHapus={onHapusTransaction}
 				/>
 				))
 		}
@@ -39,6 +39,7 @@ const Transaction = ({transactions}) => {
 				tanggal={transaction.tanggal}
 				keterangan={transaction.keterangan}
 				nominal={transaction.nominal}
+				onHapus={onHapusTransaction}
 				/>
 				))
 		}

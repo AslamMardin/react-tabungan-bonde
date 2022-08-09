@@ -6,7 +6,7 @@ const Footer = () => {
 		<div className="container">
 		<div className="row">
 		<div className="col text-center">
-		<p className="lead mb-0">Expense Tracker</p>
+		<p className="lead mb-0">TABUNGAN PINTAR</p>
 		<p>Catat setiap pemasukan dan pengeluaranmu.
 		Belum terdaftar di OJK :)</p>
 		</div>

@@ -26,7 +26,7 @@ const SaldoBox = ({transactions}) => {
 		<section id="saldo-box">
 		<div className="container mb-4">
 		<div className="total-saldo">
-		<p className="pt-4 ps-5 mb-0">Saldo</p>
+		<p className="pt-4 ps-5 mb-0">Total Keseluruhan</p>
 		<h2 className="display-5 px-5 pb-3">
 		Rp.	{(saldoPemasukan + saldoPengeluaran).toLocaleString('id-ID')}
 		</h2>

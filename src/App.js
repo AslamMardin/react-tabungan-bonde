@@ -6,25 +6,7 @@ import SaldoBox from './components/SaldoBox'
 import AddTransaction from './components/AddTransaction'
 
 const initTransactions = [
-{
-  "id": "619941539079",
-  "tanggal": new Date("01 Nov 2021 9:30").getTime(),
-  "keterangan": "Gaji bulanan",
-  "nominal": 2500000,
-},
 
-{
-  "id": "749179155708",
-  "tanggal": new Date("23 Nov 2021 10:00").getTime(),
-  "keterangan": "Uang lembur ",
-  "nominal": 750000,
-},
-{
-"id": "568004092688",
-"tanggal": new Date("24 Sept 2021 10:30").getTime(),
-"keterangan": "Beli sepatu",
-"nominal": -150000,
-}
 ]
 
 function App() {
@@ -46,15 +28,19 @@ function App() {
   // menghapus transaksi
   const handleHapusTransaction = (e) => {
 
-    let result = transactions.findIndex(transaction => (transaction.id == e.target.id))
-    console.log(result);
+    let index = transactions.findIndex(transaction => {
+      return transaction.id == e.target.id
+    })
+    let newTransaction = transactions
+    newTransaction.splice(index, 1)
+    setTransaction([...newTransaction])
   }
 
   return (
     <>
     <Header />
     <SaldoBox transactions={transactions} />
-    <Transaction transactions={transactions} />
+    <Transaction transactions={transactions} onHapusTransaction={handleHapusTransaction}  />
     <AddTransaction onTambahTransaction={handleTambahTransaction} />
     <Footer />
     </>
