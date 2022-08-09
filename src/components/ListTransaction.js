@@ -22,7 +22,7 @@ const ListTransaction = ({id, nominal, keterangan, tanggal, onHapus}) => {
 		<p className="fs-5 mb-1 me-3 text">
 		Rp. {nominal.toLocaleString('id-ID')}
 		</p>
-		<span className="delete-icon" id={id} onClick={onHapus}>x</span>
+		<span className="delete-icon" id={id} data-keterangan={keterangan} onClick={onHapus}>x</span>
 		</div>
 		)
 }

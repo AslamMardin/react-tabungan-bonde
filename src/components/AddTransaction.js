@@ -83,7 +83,7 @@ const AddTransaction = ({onTambahTransaction}) => {
 			onTambahTransaction({
 				id: Math.floor(Math.random() * 1000000000000).toString(),
 				tanggal:tanggalInput.getTime(),
-				keterangan:formInput.keterangan,
+				keterangan:formInput.keterangan.toLowerCase(),
 				nominal: parseInt(formInput.nominal)
 			})
 			// kosongkan input
@@ -120,7 +120,7 @@ const AddTransaction = ({onTambahTransaction}) => {
 						<input type="text" id="tanggal" name="tanggal"
 						placeholder="dd/mm/yyy"
 						className={`form-control ${errors.tanggal && "is-invalid"}`}
-						onChange={handleInputChange} value={formInput.tanggal}
+						onChange={handleInputChange} value={formInput.tanggal} autocomplete="off"
 						/>
 						{errors.tanggal && <small className="text-danger mt-1 fw-bold text-small">{errors.tanggal}</small>}
 					</div>
@@ -129,7 +129,7 @@ const AddTransaction = ({onTambahTransaction}) => {
 						<input type="text" id="keterangan" name="keterangan"
 						placeholder="Bayar Cicilan"
 						className={`form-control ${errors.keterangan && "is-invalid"}`}
-						onChange={handleInputChange} value={formInput.keterangan}
+						onChange={handleInputChange} value={formInput.keterangan} autocomplete="off"
 						/>
 						{errors.tanggal && <small className="text-danger mt-1 fw-bold text-small">{errors.keterangan}</small>}
 					</div>
@@ -141,7 +141,7 @@ const AddTransaction = ({onTambahTransaction}) => {
 						<input type="text" id="nominal" name="nominal" 
 						placeholder="-150000"
 						className={`form-control ${errors.nominal && "is-invalid"}`}
-						onChange={handleInputChange} value={formInput.nominal}
+						onChange={handleInputChange} value={formInput.nominal} autocomplete="off"
 						/>
 						{errors.tanggal && <small className="text-danger mt-1 fw-bold text-small">{errors.nominal}</small>}
 					</div>
